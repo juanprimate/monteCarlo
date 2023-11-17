@@ -1,0 +1,14 @@
+x=100
+a=25
+c=1313
+M=1987345
+y=numeric(100000)
+y[1]=((a*x+c)%%M)
+
+for (identifier in 2:100000) {
+    y[identifier]=((a*y[identifier-1]+c)%%M)
+}
+hist(y)
+################################
+z=mean(sin(runif(100)))
+
