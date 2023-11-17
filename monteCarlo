@@ -11,4 +11,16 @@ for (identifier in 2:100000) {
 hist(y)
 ################################
 z=mean(sin(runif(100)))
+####################
+N=100000
+x=runif(N)
+y=runif(N)
+z=numeric(N)
 
+for (identifier in seq(N)) {
+    if (x[identifier]^2+y[identifier]^2<=1) {
+        z[identifier]=1
+    }
+}
+mean(z)
+pi/4
